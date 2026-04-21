@@ -9,13 +9,17 @@ document.addEventListener("keydown", movePlayer);
 function movePlayer(event) {
     let left = player.offsetLeft;
 
-    if (event.key === "ArrowLeft" && left > 0) {
-        player.style.left = left + 20 + "px";
-}
+    if (event.key === "ArrowLeft") {
+        if (left > 0) {
+            player.style.left = left - 20 + "px";
+        }
+    }
 
-if (event.key === "ArrowRight" && left < 350) {
-    player.style.left = left + 20 + "px";
-}
+    if (event.key === "ArrowRight") {
+        if (left < 350) {
+            player.style.left = left + 20 + "px";
+        }
+    }
 }
 
 function createEnemy() {
@@ -23,7 +27,7 @@ function createEnemy() {
     enemy.classList.add("enemy");
 
     enemy.style.left =
-    Math.random() * 360 + "px";
+        Math.random() * 360 + "px";
 
     gameArea.appendChild(enemy);
 
@@ -44,14 +48,14 @@ function createEnemy() {
             enemy.offsetLeft + 40 > player.offsetLeft
         ) {
             enemy.remove();
-            lives = lives - 1
+            lives = lives - 1;
 
             document.getElementById("lives").textContent = lives;
 
             clearInterval(fall);
 
             if (lives === 0) {
-                alert ("Game Over!");
+                alert("Game Over!");
             }
         }
 

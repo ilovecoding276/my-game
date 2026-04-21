@@ -2,36 +2,34 @@
 <html>
 <head>
     <title>Dodge Game</title>
+
     <style>
-       body {
-         font-family: Arial;
-       }
+        #gameArea {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative;
+            overflow: hidden;
+        }
 
-       #gameArea {
-        width: 400px;
-        height: 400px;
-        border: 2px solid navy;
-        position: relative;
-        overflow: hidden;
-       }
+        #player {
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+            position: absolute;
+            bottom: 10px;
+            left: 175px;
+        }
 
-       #player {
-        width: 50px;
-        height: 50px;
-        background-color: paleturquoise;
-        position: absolute;
-        bottom: 10px;
-        left: 175px;
-       }
+        .enemy {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            top: 0px;
+        }
+    </style>
 
-       .enemy {
-        width: 40px;
-        height: 40px;
-        background-color: rgb(223, 161, 182);
-        position: absolute;
-        top: 0px;
-       }
-       </style>
 </head>
 
 <body>
